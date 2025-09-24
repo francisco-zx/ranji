@@ -7,7 +7,8 @@
                 <a href="#" class="js-accordion-toggle-mobile d-block">
         {% endif %}
             {% if settings.news_title %}
-                <div class="font-small opacity{% if settings.footer_menus_toggle %}-md{% endif %}-50 d-inline-block mb-md-4">{{ settings.news_title }}</div>
+                <div class="font-small w-100 text-center opacity{% if settings.footer_menus_toggle %}-md{% endif %}-50 d-inline-block mb-md-4">{{ settings.news_title }}</div>
+                <div class="font-small w-100 text-center newsletter-subtitle mb-4" style="font-weight: 400 !important;">Sé la primera en enterarte de nuestras novedades, ofertas esepeciales y todo lo relacionado con <b>ranji.</b></div>
             {% endif %}
         {% if settings.footer_menus_toggle %}
                 <span class="d-md-none">
@@ -36,6 +37,9 @@
                     {% include "snipplets/svg/plus.tpl" with {svg_custom_class: "icon-inline newsletter-btn"} %}
                 </div>
             </form>
+
+            <div class="text-center text-xs small mt-4  newsletter-terms">Al enviar tu correo electrónico, aceptas recibir mensajes de marketing automáticos y recurrentes de <b>ranji.</b> Ver <a class="font-medium underline">Términos y condiciones</a></div>
+
             {% if contact and contact.type == 'newsletter' %}
                 {% if contact.success %}
                     <div class="alert alert-success">{{ "¡Gracias por suscribirte! A partir de ahora vas a recibir nuestras novedades en tu email" | translate }}</div>
