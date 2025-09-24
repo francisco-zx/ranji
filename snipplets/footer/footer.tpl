@@ -14,13 +14,7 @@
 {% set show_help = not has_products and not has_social_network %}
 <footer class="js-footer js-hide-footer-while-scrolling display-when-content-ready{% if template == 'home' %} mt-4{% endif %}" data-store="footer">
 	<div class="container-fluid">
-		<div class="row mb-5 {% if template == 'password' %}justify-content-md-center{% endif %}">
-
-			{% if has_social_network %}
-				<div class="col-12 col-md{% if template == 'password' %}-3{% endif %} mb-4">
-					{% include "snipplets/social/social-links.tpl" %}
-				</div>
-			{% endif %}
+		<div class="row mb-5 mx-auto {% if template == 'password' %}justify-content-md-center{% endif %}">
 			
 			{% if template != 'password' %}
 
@@ -121,6 +115,12 @@
 			{% endif %}
 
 		</div>
+
+		{% if has_social_network %}
+			<div class="col-12 social-container flex justify-center col-md{% if template == 'password' %}-3{% endif %} mb-4">
+				{% include "snipplets/social/social-links.tpl" %}
+			</div>
+		{% endif %}
 
 		{% if (has_shipping_payment_logos or has_languages or has_desktop_navigation) and template != 'password' %}
 			<div class="row mb-4 align-items-center">
