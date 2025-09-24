@@ -2,7 +2,7 @@
 
 {% if settings.news_show %}
     <div class="js-newsletter newsletter">
-        {% if settings.footer_menus_toggle %}
+        {% if false %}
             <div class="js-accordion-container">
                 <a href="#" class="js-accordion-toggle-mobile d-block">
         {% endif %}
@@ -10,7 +10,7 @@
                 <div class="font-small w-100 text-center opacity{% if settings.footer_menus_toggle %}-md{% endif %}-50 d-inline-block mb-md-4">{{ settings.news_title }}</div>
                 <div class="font-small w-100 text-center newsletter-subtitle mb-4" style="font-weight: 400 !important;">Sé la primera en enterarte de nuestras novedades, ofertas esepeciales y todo lo relacionado con <b>ranji.</b></div>
             {% endif %}
-        {% if settings.footer_menus_toggle %}
+        {% if false %}
                 <span class="d-md-none">
                     <span class="js-accordion-toggle-inactive">
                         {% include "snipplets/svg/chevron-down.tpl" with {svg_custom_class: "icon-inline icon-w-14 icon-md ml-2"} %}
@@ -47,7 +47,7 @@
                     <div class="alert alert-danger">{{ "Necesitamos tu email para enviarte nuestras novedades." | translate }}</div>
                 {% endif %}
             {% endif %}
-        {% if settings.footer_menus_toggle %}
+        {% if false %}
                 </div>
             </div>
         {% endif %}
